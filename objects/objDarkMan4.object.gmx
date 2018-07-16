@@ -91,7 +91,7 @@ enemyDamageValue(objGeminiLaser, 2);
 enemyDamageValue(objSolarBlaze, 2);
 enemyDamageValue(objTopSpin, 0);
 enemyDamageValue(objThunderWool, 4);
-enemyDamageValue(objPharaohShot, 1);
+enemyDamageValue(objPharaohShot, 3);
 enemyDamageValue(objBlackHoleBomb, 1);
 enemyDamageValue(objMagicCard, 2);
 
@@ -396,8 +396,12 @@ if (isIntro)
             break;
         // Player disguise
         case 1:
-            _costume = objMegaman.costumeID;
-            targetPID = objMegaman.playerID;
+            if instance_exists(target)
+            {
+                _costume = target.costumeID;
+                targetPID = target.playerID;
+            }
+            
             if (attackTimer &lt; 10)
             {
                 drawPlayer(targetPID, _costume, 0, 0, x, y, image_xscale, image_yscale);
