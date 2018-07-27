@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="89" name="datafiles">
+  <datafiles number="90" name="datafiles">
     <datafile>
       <name>CleanMem.dll</name>
       <exists>-1</exists>
@@ -55,7 +55,7 @@
       </ConfigOptions>
       <filename>GMFMODSimple.dll</filename>
     </datafile>
-    <datafiles number="89" name="Music">
+    <datafiles number="90" name="Music">
       <datafile>
         <name>14 Tenguman.spc</name>
         <exists>-1</exists>
@@ -516,7 +516,7 @@
         <filename>WilyIntro.ogg</filename>
       </datafile>
     </datafiles>
-    <datafiles number="89" name="Recordings">
+    <datafiles number="90" name="Recordings">
       <datafile>
         <name>demoHoneyWoman.mrc</name>
         <exists>-1</exists>
@@ -569,8 +569,8 @@
         <filename>demoPico.mrc</filename>
       </datafile>
     </datafiles>
-    <datafiles number="89" name="UnitTests">
-      <datafiles number="89" name="Rooms">
+    <datafiles number="90" name="UnitTests">
+      <datafiles number="90" name="Rooms">
         <datafile>
           <name>lvlRecordingTest.room.gmx</name>
           <exists>-1</exists>
@@ -691,7 +691,7 @@
           <filename>lvlUnitTestBossDoors.room.gmx</filename>
         </datafile>
       </datafiles>
-      <datafiles number="89" name="Recordings">
+      <datafiles number="90" name="Recordings">
         <datafile>
           <name>RecordingObjectSet.mrc</name>
           <exists>-1</exists>
@@ -830,7 +830,7 @@
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="89" name="Misc">
+    <datafiles number="90" name="Misc">
       <datafile>
         <name>sinTable.txt</name>
         <exists>-1</exists>
@@ -864,6 +864,25 @@
           </Config>
         </ConfigOptions>
         <filename>cosTable.txt</filename>
+      </datafile>
+    </datafiles>
+    <datafiles number="90" name="Rooms">
+      <datafile>
+        <name>lvlGutsMan.room.gmx</name>
+        <exists>-1</exists>
+        <size>591300</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>lvlGutsMan.room.gmx</filename>
       </datafile>
     </datafiles>
   </datafiles>
@@ -1356,6 +1375,7 @@
             <sprite>sprites\sprWeaponIconsBrickWeapon</sprite>
             <sprite>sprites\sprWeaponIconsPlantBarrier</sprite>
             <sprite>sprites\sprWeaponIconsPowerStone</sprite>
+            <sprite>sprites\sprWeaponIconsTimeStopper</sprite>
             <sprite>sprites\sprWeaponIconsIceSlasher</sprite>
           </sprites>
         </sprites>
@@ -2390,6 +2410,7 @@
         <sprites name="Bomb">
           <sprite>sprites\sprBombMan</sprite>
           <sprite>sprites\sprBombManBomb</sprite>
+          <sprite>sprites\sprBombManBlast</sprite>
           <sprite>sprites\mskBombMan</sprite>
         </sprites>
         <sprites name="Cut">
@@ -2779,6 +2800,7 @@
         </sprites>
         <sprites name="GiantSuzy">
           <sprite>sprites\sprGiantSuzy</sprite>
+          <sprite>sprites\sprGiantSuzyArtColours</sprite>
         </sprites>
         <sprites name="Punk">
           <sprite>sprites\sprPunk</sprite>
@@ -2795,6 +2817,7 @@
         </sprites>
         <sprites name="Ballade">
           <sprite>sprites\sprBallade1</sprite>
+          <sprite>sprites\sprBallade2</sprite>
           <sprite>sprites\sprBalladeBalladeCracker</sprite>
           <sprite>sprites\mskBallade</sprite>
         </sprites>
@@ -3422,6 +3445,7 @@
       <sprite>sprites\sprRecPlay</sprite>
       <sprite>sprites\sprSavingIcon</sprite>
       <sprite>sprites\sprEnergySaver</sprite>
+      <sprite>sprites\sprRushBikeShopIcon</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -3551,7 +3575,7 @@
         <background>background\tstMM4Wily4</background>
         <background>background\tstTeleporter</background>
         <backgrounds name="Animated">
-          <background>background\tstTeleporter1</background>
+          <background>background\tstBrightmanAnimated1</background>
           <background>background\tstPharohManFlame1</background>
           <background>background\tstPharohManFlame2</background>
           <background>background\tstPharohManFlame3</background>
@@ -3560,6 +3584,7 @@
           <background>background\tstPharohManStars1</background>
           <background>background\tstPharohManStars2</background>
           <background>background\tstPharohManStars3</background>
+          <background>background\tstTeleporter1</background>
         </backgrounds>
       </backgrounds>
       <backgrounds name="MM5">
@@ -3635,6 +3660,7 @@
         <background>background\tstMM9Wily2</background>
         <background>background\tstMM9Wily3</background>
         <background>background\tstMM9Wily4</background>
+        <background>background\tstFakeman</background>
         <background>background\tstMM9Endless</background>
       </backgrounds>
       <backgrounds name="MM10">
@@ -3655,6 +3681,7 @@
         <background>background\tstMM10Enker</background>
         <background>background\tstMM10Punk</background>
         <background>background\tstMM10Lab</background>
+        <background>background\tstMM10Endless</background>
         <backgrounds name="Animated">
           <background>background\tstCommandoManAnimated1</background>
           <background>background\tstCommandoManAnimated2</background>
@@ -5724,10 +5751,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmInit</room>
-    <room>rooms\lvlBeta</room>
     <room>rooms\lvlCopyThisRoom</room>
     <rooms name="Example Game">
-      <room>rooms\lvlGutsMan</room>
       <room>rooms\lvlFlashMan</room>
       <room>rooms\lvlGeminiMan</room>
       <room>rooms\lvlPharaohMan</room>

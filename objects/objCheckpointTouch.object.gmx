@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>-100</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>prtAlwaysActive</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -32,18 +32,16 @@
 /// stretch the object in the editor to cover the area you want to trigger the checkpoint
 
 //@cc (the X position in pixels Mega Man should spawn at when using the checkpoint)
-xx = 0;
+xx = x + 8;
 
 //@cc (the Y position in pixels Mega Man should spawn at when using the checkpoint)
-yy = 0;
+yy = y;
 
 //@cc 0 = teleport land, 1 = teleport in, 2 = fall in, 3 = Jump in, 4 = stand there (set showDuringReady to true), 8 = Skull elevator
 respawnAnimation = 0;
 
 //@cc play the animation sequence while ready's being displayed
 showDuringReady = false;
-
-alarm[0] = 1;
 </string>
           </argument>
         </arguments>

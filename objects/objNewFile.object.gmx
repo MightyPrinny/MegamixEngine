@@ -35,7 +35,6 @@ optionText[0] = "Back...";
 optionText[1] = "Easy";
 optionText[2] = "Normal";
 optionText[3] = "Hard";
-optionText[4] = "Skip";
 </string>
           </argument>
         </arguments>
@@ -62,7 +61,7 @@ optionText[4] = "Skip";
 
 if (!controlsLocked)
 {
-    var selectionCount = 5;
+    var selectionCount = 4;
     
     // switch selection
     var yDir = 0;
@@ -154,7 +153,7 @@ if (!controlsLocked)
 draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-for (var i = 0; i &lt; 5; i++)
+for (var i = 0; i &lt; 4; i++)
 {
     var draw_y = 48 + i * 12;
     
